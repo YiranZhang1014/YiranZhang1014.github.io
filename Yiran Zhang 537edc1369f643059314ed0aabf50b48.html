@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Yiran Zhang</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="537edc13-69f6-4305-9314-ed0aabf50b48" class="page sans"><header><h1 class="page-title">Yiran Zhang</h1><p class="page-description"></p></header><div class="page-body"><div id="0618c7ab-9c7d-48a8-8823-234311202a4a" class="column-list"><div id="fd896f85-6c57-4cd5-aa4e-5a21e0e76d5c" style="width:25%" class="column"><figure id="a5a6ad5a-cb4a-4ece-a0c1-9aa190a83002" class="image"><a href="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/Screenshot_2024-05-12_204027.png"><img style="width:192px" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/Screenshot_2024-05-12_204027.png"/></a></figure><p id="b20838b0-40d6-46db-9064-3f154780eb63" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ee1c5092-bab6-45ae-b31c-0392d5eb1f7d"><div style="font-size:1.5em"><span class="icon">📍</span></div><div style="width:100%"><a href="https://www.google.co.uk/maps/place/St+Mary&#x27;s+Hospital/@53.467194,-2.2242065,14z/data=!3m1!5s0x487bb188ab701cfb:0xf48f25a87383691f!4m6!3m5!1s0x487bb188faa16979:0x47bd6753c924532a!8m2!3d53.461001!4d-2.2253729!16s%2Fg%2F1jljydv9z?entry=ttu">St Mary’s Hospital</a><br/><br/><a href="https://www.google.com/maps/place/Vaughan+House,+Portsmouth+St,+Manchester+M13+9GB,+UK/@53.4648299,-2.233506,17z/data=!3m1!4b1!4m6!3m5!1s0x487bb18dd6c3fa77:0xc86123b9cea7d845!8m2!3d53.4648299!4d-2.2309311!16s%2Fg%2F1thly_92?hl=en-GB&amp;entry=ttu">Vaughan House</a> </div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="be6e5804-39be-48e8-ab66-eef719b499a3"><div style="font-size:1.5em"><span class="icon">📧</span></div><div style="width:100%"><a href="mailto:yiran.zhang-12@postgrad.manchester.ac.uk">Email</a> </div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="aa83bcb6-039f-44e5-9936-3520967bef32"><div style="font-size:1.5em"><img class="icon" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/github-mark.png"/></div><div style="width:100%"><a href="https://github.com/YiranZhang1014">GitHub</a></div></figure><hr id="4cc9e77b-96d9-4998-bf84-c46804e0044f"/><h3 id="dc57462e-3a37-42cf-aad7-b3146a3c14fd" class="">Interests</h3><p id="54a87079-ca3a-48d5-b2b4-8475313f6817" class="">💡 Health Informatics </p><p id="dbdc0c91-be70-4b73-9e3a-64a42da1b701" class="">💡 Data Analytics  </p><p id="c09285a7-2316-481c-9cc5-8611a9beef8b" class="">💡 Big Data Development </p><p id="6a37b7d9-4cd7-46ee-b46a-208cfdf6b3e6" class="">💡 Software Engineering </p><h3 id="fe713895-1407-4f2e-8fb9-ae2c48e1c065" class="">Skills</h3><p id="6a6e3e8f-9b04-43c8-9f43-7f0728de778a" class="">⚙️ Machine Learning </p><p id="e31875f8-645b-4478-abeb-c42465c2f3f4" class="">⚙️ Deep Learning </p><p id="bddb4c14-5b3c-466b-9ab3-cc155a32548f" class="">⚙️ Python, R, SQL, Java, etc. </p><h3 id="0341d311-7ada-4ee1-9dcb-5e791dcc00c6" class="">Languages</h3><p id="ff50bdfd-28ee-430a-b17e-0bf79fd95559" class="">🇨🇳 Chinese</p><p id="d2f9a773-3b3c-4848-b8f1-80ef20401f9a" class="">🇬🇧 English</p><p id="549585ae-7495-4bd1-af28-c5d34eb30a6f" class="">
+</p><hr id="19c02a58-d019-402a-bafe-8d63761e817d"/><h3 id="defeb0e2-902e-4527-9d0d-13d4fa84e8b6" class="">You can also find me on:</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9f3b8051-c218-412f-911e-c5cef1da4ffc"><div style="font-size:1.5em"><img class="icon" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/facebook.png"/></div><div style="width:100%"><a href="https://www.facebook.com/profile.php?id=100072934346476">Facebook</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="90ce4e6d-6ecb-444d-8db5-fd4287aa2a39"><div style="font-size:1.5em"><img class="icon" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/instagram.png"/></div><div style="width:100%"><a href="https://www.instagram.com/alaskyed/">Instagram</a></div></figure><p id="db0c3a5e-947e-48e9-a46f-788aeeffb324" class="">
+</p></div><div id="5091092a-072e-4f7a-85d2-dcec88910016" style="width:75%" class="column"><h1 id="c091e2b2-e9ab-4ff3-b134-55a4dbb0ca94" class="">PhD Student - University of Manchester</h1><blockquote id="f968eda0-e0b2-4a10-8581-40255ed14410" class="">Hello there! I&#x27;m a first-year student at the University of Manchester. I am doing multi-outcome clinical prediction modelling for my PhD project, supervised by <a href="https://research.manchester.ac.uk/en/persons/victoria.palin">Victoria Palin</a>, <a href="https://research.manchester.ac.uk/en/persons/glen.martin">Glen Martin</a>, and <a href="https://research.manchester.ac.uk/en/persons/tjeerd.vanstaa">Tjeerd Van Staa</a>. <br/><br/>My research interests include healthcare statistics, data analytics, and machine/deep learning. I have experience in cancer risk analysis, synthetic electronic health records generation, and image processing.  I am passionate about leveraging data science techniques to address real-world challenges. Whether it’s developing innovative algorithms or collaborating on interdisciplinary projects, I thrive on pushing the boundaries of knowledge and making a positive impact. <br/></blockquote><p id="ce1867fd-47f9-47dd-b605-46a93394284b" class="">
+</p><hr id="243e6bb9-e975-4fa5-91f7-03f8dc3f12d8"/><h1 id="9ee76263-54aa-461c-99e6-7196b3a99af6" class="">EDUCATION </h1><div id="a809247f-aad0-43cd-9457-ee367e666fde" class="column-list"><div id="ea62a848-10e7-413f-8e69-a453590d3bdf" style="width:16.666666666666664%" class="column"><figure id="a7bc24cd-1064-4fdf-81a2-8adaeea60eab" class="image"><a href="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/c947a393-88f2-4e8a-bade-1864051206ef.png"><img style="width:714.2222222222222px" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/c947a393-88f2-4e8a-bade-1864051206ef.png"/></a></figure></div><div id="a62b3bfc-22bc-44e6-b107-128fdd2b3cc9" style="width:16.666666666666664%" class="column"><p id="f68888aa-8a59-4e95-845f-a5984f47a7e3" class=""><strong>2023 - Now</strong></p><p id="e76309d5-a7e6-4d8b-b50c-3141afbc8a08" class="">
+</p></div><div id="4a7dc949-44ea-4e8e-9a4a-c5693d1654e7" style="width:79.16666666666667%" class="column"><p id="be4ed486-1881-42c6-8389-ce9cd035ea59" class=""><strong><mark class="highlight-blue">University of Manchester </mark></strong></p><p id="ccfa6958-f342-4088-a2be-9d9396db1db6" class="">PhD Health Informatics </p></div></div><div id="02cece1c-202b-48cc-8cd9-2abe25c8c8c8" class="column-list"><div id="1c283bf6-f1d6-4fe9-ae4b-02a1d2bf55fc" style="width:16.666666666666664%" class="column"><figure id="0e9fb76d-4f12-49b8-9b57-12a8c3f9f8d8" class="image"><a href="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/Leeds_University.jpeg"><img style="width:2574px" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/Leeds_University.jpeg"/></a></figure></div><div id="0cd0368a-bb6f-4391-97d9-322544074668" style="width:16.666666666666664%" class="column"><p id="b3be7a69-5cda-4c7e-9b81-a64ecb12a4eb" class=""><strong>2021 - 2022</strong></p></div><div id="0378bb4d-807b-4328-ae05-414d5712bbaa" style="width:79.16666666666667%" class="column"><p id="deb1d64a-76b2-4cad-9215-bf7160cc9014" class=""><strong><mark class="highlight-blue">University of Leeds </mark></strong></p><p id="697cf395-279f-4c80-9a69-1ccee2a8b267" class="">MSc Advanced Computer Science (Data Analytics) </p></div></div><div id="c0a1d9d1-c104-4bb4-ba97-97bf1276d682" class="column-list"><div id="b7dea43c-0d52-40ce-beb6-51e7182a4fb7" style="width:16.666666666666664%" class="column"><figure id="d1f05b7e-821b-438c-9aa4-3bad879bba10" class="image"><a href="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/Untitled.png"><img style="width:608px" src="Yiran%20Zhang%20537edc1369f643059314ed0aabf50b48/Untitled.png"/></a></figure></div><div id="ec8ecb2a-ba25-418e-9e0d-ff5bbef949f2" style="width:16.666666666666664%" class="column"><p id="6d0cbddd-528d-4761-b79b-9be16eeed40c" class=""><strong>2016 - 2020</strong></p></div><div id="454b8b5b-7a66-41e8-8560-ac94cae8c6a8" style="width:79.16666666666667%" class="column"><p id="8bd08d1c-2764-40c9-b49a-df64cabded0f" class=""><strong><mark class="highlight-blue">Ludong University  </mark></strong></p><p id="81413ebd-87f9-49cf-93bd-7a40b7497e63" class="">Eng Network Engineering (Cloud Computing and Big Data) </p><p id="1d58be11-e16b-4a54-a197-d2cc031bc859" class="">
+</p></div></div><hr id="c95d3b7c-c099-4852-891b-5e99e06ed2cb"/><h1 id="c567fc95-3b27-4f32-9ca1-73dd38b74e1b" class=""><strong>PROFESSIONAL EXPERIENCE </strong></h1><div id="96af25dd-5aab-4375-87b5-6622d3008fe7" class="column-list"><div id="e3e23282-4453-4e38-8698-26187f3e5d69" style="width:12.5%" class="column"><p id="0d1c8a5c-4729-44f8-90cb-7733a21e103a" class=""><strong>2023 - Now</strong></p></div><div id="07f434fb-55b1-401e-8326-29dfea2e8f76" style="width:87.5%" class="column"><p id="5a5cb642-4fe6-4748-ab4d-0aa8d2efdeac" class=""><strong>PhD Study </strong>| <strong><mark class="highlight-blue">Multiple outcome prediction modelling for adverse pregnancy outcomes </mark></strong></p><p id="9abf344a-6a5c-4ed9-aab3-5b3db58954d0" class="">With a focus on addressing the complexities of pregnancy complications, this project aims to specialise in developing and validating multiple-outcome clinical prediction models (CPMs) tailored to estimate complicated adverse pregnancy outcomes and comparing the efficacy of multi-outcome models against traditional single-outcome approaches. </p></div></div><div id="42ec16b0-11b6-4451-8cb7-cea820254877" class="column-list"><div id="271d0863-8466-461b-8b1d-c8e4e38910d2" style="width:12.5%" class="column"><p id="2ff5911a-95bd-4e52-9f48-b6a5139d82d4" class=""><strong>2022 - 2023</strong></p></div><div id="004cfb50-294f-4814-998a-921a73881a44" style="width:87.5%" class="column"><p id="8a4ae161-3a1a-4d3f-be07-679a6e20daf7" class=""><strong>Leader </strong>| <mark class="highlight-blue"><strong>Breast cancer prediction model and risk factor analysis based on imbalanced data </strong></mark></p><p id="84b7f164-ecaf-429c-81fd-f10db5bb4790" class="">This project uses routinely collected data from a wide range of populations, adjusts for unbalanced data, and develops an XGBoost predictive model that validates the performance of the SMOTE algorithm in dealing with unbalanced data. The project also used Bayesian networks to analyse risk factors for breast cancer. </p></div></div><div id="00f84395-ce32-4f93-a6d1-731232554fc2" class="column-list"><div id="e8e79d9b-7526-4217-b54a-c7c40d29423e" style="width:12.5%" class="column"><p id="9d59286d-e424-4b59-9c01-be5654093b76" class=""><strong>2022 - Now</strong></p></div><div id="94ae1a98-2cc1-40db-a851-a4dc3964bd45" style="width:87.5%" class="column"><p id="2b63e496-1d44-457f-94b9-23b8767bb7ed" class=""><strong>Master Study </strong>| <strong><mark class="highlight-blue">Synthetic Electronic Health Records Generation</mark></strong></p><p id="fc7af6f0-601d-4027-acdf-63853905cb1e" class="">To protect patient privacy and provide additional training data for medical AI models, generated synthetic healthcare records from the MIMIC-III database based on Bayesian networks and GAN models. </p></div></div><div id="85ec704e-b425-43b4-a399-267ea9d2c4fb" class="column-list"><div id="d137809b-7851-4a49-8f34-544b1707d529" style="width:12.5%" class="column"><p id="4e5ac38b-1714-496d-b855-f265c1a71720" class=""><strong>2019 - 2021</strong></p></div><div id="a84ee636-b8cf-4362-9110-a1d05a6e400b" style="width:87.5%" class="column"><p id="ecae1b4a-0bd4-4832-8ddc-c2341c8b5d49" class=""><strong>Bachelor Project</strong> | <mark class="highlight-blue"><strong>Cloud University Club and Societies</strong></mark></p><p id="7bca9eb4-33b4-4710-ba8d-254a34ff409a" class="">This project involved the development of an online platform for managing and communicating within Chinese university clubs and societies. The system was built using big data techniques, with a distributed application server and database. Redis was employed to share sessions across servers. Additionally, backend storage and analysis were powered by big data techniques including Hadoop, Spark, HBase, Hive, etc. </p></div></div><div id="b8066374-a30b-4624-9adb-b4fdf0889de4" class="column-list"><div id="138410af-6bf3-40a5-b877-092d90e7dbcc" style="width:12.5%" class="column"><p id="0f211c92-dbb5-47b1-a524-94a5bfaa0823" class=""><strong>2017 - 2020</strong></p></div><div id="f0d6cca7-6ce7-4298-b2c6-1e4ea93b1eb8" style="width:87.5%" class="column"><p id="71e706c2-a6e1-427a-ad8a-8b773d861987" class=""><strong>Member </strong>| <mark class="highlight-blue"><strong>Humanoid Robot Football (RoboCup) </strong></mark></p><p id="c095637b-0c2b-4162-9dd1-d18a28d596ca" class="">The project uses NAO robots, mainly to complete 5v5 football matches. I worked as part of the lab team focusing on robot status decisions, path searching and motion adjustment. The robot&#x27;s path planning was optimised by introducing the A* algorithm, and speed and stability adjustments were made to the kicking motion. We participate in the RoboCup football tournament every year and have won the second and third prizes at the national level. </p></div></div><p id="16e9d12d-2d34-484f-b916-cb7c77ac4a37" class="">
+</p></div></div><hr id="d789ce2b-8b2c-4853-a9d2-f145db048725"/><p id="b2bb8f31-8163-476a-bc85-6eedf55e9b29" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
